@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Al enchufar el iPad por USB, conecta Sidecar. vigilar_cable duerme hasta que
+     IOKit avisa del enchufe. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>local.ipad-pantalla</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>__DIR__/vigilar_cable</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/pantalla-ipad.launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/pantalla-ipad.launchd.log</string>
+</dict>
+</plist>
